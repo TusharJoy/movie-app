@@ -8,7 +8,7 @@ import router from "@/routes";
 
 export default class Movie extends Vue {
 
-    imgPreUrl = "http://image.tmdb.org/t/p/w342"
+    imgPreUrl = "https://image.tmdb.org/t/p/w342"
 
     goToDetails = (Id: string, type: string) => {
 

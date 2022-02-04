@@ -19,7 +19,7 @@ export default {
   props: ['person'],
   data() {
     return {
-      imgPreUrl: "http://image.tmdb.org/t/p/w342"
+      imgPreUrl: "https://image.tmdb.org/t/p/w342"
     };
   },
   methods: {

@@ -15,7 +15,7 @@ export default class TvDetails extends Vue {
     created() {
         let personId = this.$route.query.id;
         console.log(personId);
-        Http.get("https://api.themoviedb.org/3/person/" + personId + "?api_key=015ba765160b1e8bff2e97a5eb446a98")
+        Http.get("person/" + personId)
             .then(response => {
                 this.details = response.data
             })

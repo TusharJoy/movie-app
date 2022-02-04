@@ -3,6 +3,7 @@ import AdminLayout from '@/layouts/Admin/index.vue';
 import MovieDetailsComponent from '@/components/MovieDetails/index.vue';
 import {Http} from "@/services/http-common";
 import SearchBar from "@/components/SearchBar.vue";
+
 @Options({
     components: {
         AdminLayout,
@@ -15,7 +16,7 @@ export default class MovieDetails extends Vue {
 
     created() {
         let movieId = this.$route.query.id;
-        Http.get("https://api.themoviedb.org/3/movie/" + movieId + "?api_key=015ba765160b1e8bff2e97a5eb446a98")
+        Http.get("movie/" + movieId)
             .then(response => {
                 this.movieDetails = response.data
             })

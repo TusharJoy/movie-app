@@ -10,5 +10,4 @@ import SearchBar from "@/components/SearchBar.vue";
     },
 })
 export default class Dashboard extends Vue {
-    movies = [1,2,4,5,4,5]
 }

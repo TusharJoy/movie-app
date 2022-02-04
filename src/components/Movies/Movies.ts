@@ -13,7 +13,7 @@ export default class Movies extends Vue {
     moviesData =null
 
     created(){
-        Http.get(`https://api.themoviedb.org/3/discover/movie?api_key=015ba765160b1e8bff2e97a5eb446a98&sort_by=popularity.desc`)
+        Http.get(`/discover/movie`)
             .then(response => {
                 this.moviesData = response.data.results
             })

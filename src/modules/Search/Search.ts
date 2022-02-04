@@ -30,7 +30,7 @@ export default class Search extends Vue {
 
     getSearchedResult() {
         this.resetResult()
-        Http.get("https://api.themoviedb.org/3/search/multi?api_key=015ba765160b1e8bff2e97a5eb446a98&language=en-US&query=" + this.query)
+        Http.get("search/multi?query=" + this.query)
             .then(response => {
                 let data = response.data.results
 

@@ -14,7 +14,7 @@ export default class Persons extends Vue {
     persons = null
 
     created() {
-        Http.get(`https://api.themoviedb.org/3/person/popular?api_key=015ba765160b1e8bff2e97a5eb446a98&sort_by=popularity.desc`)
+        Http.get("person/popular")
             .then(response => {
                 this.persons = response.data.results
             })

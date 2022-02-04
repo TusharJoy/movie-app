@@ -8,33 +8,33 @@
             <div class="absolute inset-0 z-10 transition duration-300 ease-in-out bg-gradient-to-t from-black via-gray-900 to-transparent"></div>
             <div class="relative cursor-pointer group z-10 px-10 pt-10 space-y-6 movie_info">
                 <div class="poster__info align-self-end w-full">
-                    <div class="h-32"></div>
-                    <div class="space-y-6 detail_info">
+                    <div class="h-32 mt-lg-7"></div>
+                    <div class="space-y-6 detail_info mt-lg-5">
                         <div class="flex flex-col space-y-2 inner">
                             <h3 class="text-2xl font-bold text-white" v-if="type ==='movie'" data-unsp-sanitized="clean">{{ movie.title }}</h3>
                             <h3 class="text-2xl font-bold text-white" v-if="type ==='tv'" data-unsp-sanitized="clean">{{ movie.name }}</h3>
                         </div>
-                        <div class="flex flex-row justify-between datos">
-                            <div class="flex flex-col datos_col">
+                        <div class="flex flex-row justify-between ">
+                            <div class="flex flex-col ">
                                 <div class="popularity">{{ movie.popularity }}</div>
                                 <div class="text-sm text-gray-400">Popularity:</div>
                             </div>
-                            <div class="flex flex-col datos_col">
+                            <div class="flex flex-col">
                                 <div class="release">{{ movie.release_date }}</div>
                                 <div class="text-sm text-gray-400">Release date:</div>
                             </div>
                         </div>
                         <div class="flex flex-col overview">
                             <div class="flex flex-col"></div>
-                            <div class="text-xs text-gray-400 mb-2">Overview:</div>
-                            <p class="text-xs text-gray-100 mb-6">
+                            <div class="text-xs text-gray-400">Overview:</div>
+                            <p class="text-xs text-gray-100">
                                 {{ movie.overview }}
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <img class="absolute inset-0 transform w-full -translate-y-4" :src="imgPreUrl + movie.poster_path"
+            <img class=" absolute inset-0 transform w-full -translate-y-4" :src="imgPreUrl + movie.poster_path"
                  style="filter: grayscale(0);" alt="movie"/>
         </div>
 

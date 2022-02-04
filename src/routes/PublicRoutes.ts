@@ -28,13 +28,13 @@ export const PublicRoutes: Array<RouteRecordRaw> = [
     },
     {
         path: '/persons',
-        name: 'person',
+        name: 'persons',
         component: () => import(/* webpackChunkName: "about" */ '@/modules/Person/index.vue'),
     },
     {
         path: '/person',
-        name: 'person.details',
-        component: () => import(/* webpackChunkName: "about" */ '@/modules/Movie/index.vue'),
+        name: 'person',
+        component: () => import(/* webpackChunkName: "about" */ '@/modules/PersonDetails/index.vue'),
     },
 
     {

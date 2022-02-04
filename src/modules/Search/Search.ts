@@ -17,6 +17,17 @@ export default class Search extends Vue {
     personData = [];
     query = null;
 
+    created() {
+        // @ts-ignore
+        let param = this.$route.query.query;
+        console.log(param)
+        if (param != null) {
+            // @ts-ignore
+            this.query = param;
+            this.getSearchedResult()
+        }
+    }
+
     getSearchedResult() {
         this.resetResult()
         Http.get("https://api.themoviedb.org/3/search/multi?api_key=015ba765160b1e8bff2e97a5eb446a98&language=en-US&query=" + this.query)
@@ -24,8 +35,6 @@ export default class Search extends Vue {
                 let data = response.data.results
 
                 data.forEach((element: any, index: any) => {
-                    console.log(element.media_type);
-                    console.log(this.movieData);
                     if (element.media_type === "movie") {
                         // @ts-ignore
                         this.movieData.push(element);

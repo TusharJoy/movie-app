@@ -2,10 +2,10 @@ import {Options, Vue} from 'vue-class-component';
 import MovieComponent from '@/components/Movie/index.vue';
 import {Http} from '@/services/http-common';
 import AdminLayout from '@/layouts/Admin/index.vue';
-
+import SearchBar from "@/components/SearchBar.vue";
 @Options({
     components: {
-        MovieComponent, AdminLayout
+        MovieComponent, AdminLayout,SearchBar
     },
 })
 export default class TvShow extends Vue {

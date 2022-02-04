@@ -1,6 +1,7 @@
 import {Options, Vue} from 'vue-class-component';
 import {Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems} from '@headlessui/vue'
 import {BellIcon, MenuIcon, XIcon} from '@heroicons/vue/outline'
+import router from "@/routes";
 
 @Options({
     name: 'NavbarComponent',

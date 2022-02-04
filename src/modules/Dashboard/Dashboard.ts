@@ -1,11 +1,12 @@
 import { Options, Vue } from 'vue-class-component';
 import AdminLayout from '@/layouts/Admin/index.vue';
 import MoviesComponent from '@/components/Movies/index.vue';
+import SearchBar from "@/components/SearchBar.vue";
 
 @Options({
     components: {
         MoviesComponent,
-        AdminLayout,
+        AdminLayout,SearchBar
     },
 })
 export default class Dashboard extends Vue {

@@ -3,15 +3,15 @@ import router from "@/routes";
 
 @Options({
     name: 'MovieComponent',
-    props: ['movie'],
+    props: ['movie', 'type'],
 })
 
 export default class Movie extends Vue {
 
     imgPreUrl = "http://image.tmdb.org/t/p/w342"
 
-    goToDetails = (movieId: string) => {
-        console.log(movieId);
-        router.push({ name: 'movie', query: { id: movieId } })
+    goToDetails = (Id: string, type: string) => {
+
+        router.push({name: type, query: {id: Id}})
     }
 }

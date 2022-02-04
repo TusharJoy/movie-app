@@ -8,7 +8,7 @@ export const PublicRoutes: Array<RouteRecordRaw> = [
     },
     {
         path: '/movies',
-        name: 'admin.dashboard',
+        name: 'movies',
         component: () => import(/* webpackChunkName: "about" */ '@/modules/Dashboard/index.vue'),
     },
     {
@@ -16,6 +16,27 @@ export const PublicRoutes: Array<RouteRecordRaw> = [
         name: 'movie',
         component: () => import(/* webpackChunkName: "about" */ '@/modules/Movie/index.vue'),
     },
+    {
+        path: '/tv-series',
+        name: 'tv-series',
+        component: () => import(/* webpackChunkName: "about" */ '@/modules/TvShow/index.vue'),
+    },
+    {
+        path: '/tv',
+        name: 'tv',
+        component: () => import(/* webpackChunkName: "about" */ '@/modules/TvDetails/index.vue'),
+    },
+    {
+        path: '/persons',
+        name: 'person',
+        component: () => import(/* webpackChunkName: "about" */ '@/modules/Person/index.vue'),
+    },
+    {
+        path: '/person',
+        name: 'person.details',
+        component: () => import(/* webpackChunkName: "about" */ '@/modules/Movie/index.vue'),
+    },
+
     {
         path: '/search',
         name: 'search',

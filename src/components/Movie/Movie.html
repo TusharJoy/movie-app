@@ -1,5 +1,6 @@
 <div>
-    <div class='flex max-w-sm w-full bg-white shadow-md rounded-lg overflow-hidden mx-auto' @click="goToDetails(movie.id)">
+    <div class='flex max-w-sm w-full bg-white shadow-md rounded-lg overflow-hidden mx-auto'
+         @click="goToDetails(movie.id,type)">
         <div class='w-2 bg-gray-800'></div>
 
         <div class="overflow-hidden rounded-xl relative transform hover:-translate-y-2 transition ease-in-out duration-500 shadow-lg hover:shadow-2xl movie-item text-white movie-card"
@@ -10,7 +11,8 @@
                     <div class="h-32"></div>
                     <div class="space-y-6 detail_info">
                         <div class="flex flex-col space-y-2 inner">
-                            <h3 class="text-2xl font-bold text-white" data-unsp-sanitized="clean">{{ movie.title }}</h3>
+                            <h3 class="text-2xl font-bold text-white" v-if="type ==='movie'" data-unsp-sanitized="clean">{{ movie.title }}</h3>
+                            <h3 class="text-2xl font-bold text-white" v-if="type ==='tv'" data-unsp-sanitized="clean">{{ movie.name }}</h3>
                         </div>
                         <div class="flex flex-row justify-between datos">
                             <div class="flex flex-col datos_col">

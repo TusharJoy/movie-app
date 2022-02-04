@@ -1,0 +1,9 @@
+<admin-layout>
+    <h3 class="text-center">Discover TvShows</h3>
+
+    <div class="row">
+        <movie-component v-for="tv in tvData" class="col-3" :movie="tv" type="tv">
+        </movie-component>
+    </div>
+
+</admin-layout>

@@ -3,7 +3,7 @@ import {Options, Vue} from 'vue-class-component';
 
 @Options({
     name: 'MovieDetailsComponent',
-    props:['movieDetails']
+    props: ['movieDetails', 'type']
 })
 
 export default class Movie extends Vue {
